@@ -1,0 +1,25 @@
+{
+  "name": "note",
+  "version": "0.0.1",
+  "description": "quietcoder's internet notebook",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "html": "^0.0.10",
+    "jade": "^1.11.0",
+    "moment": "^2.10.6",
+    "mongoose": "^4.1.9",
+    "path": "^0.12.7",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "notbook"
+  ],
+  "author": "quietcoder",
+  "license": "ISC"
+}

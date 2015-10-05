@@ -1,0 +1,27 @@
+{
+  "name": "quietcoder's note",
+  "version": "0.0.1",
+  "description": "quietcoder's internet notebook",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "notebook"
+  ],
+  "authors": [
+    "quietcoder"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

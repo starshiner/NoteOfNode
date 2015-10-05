@@ -1,0 +1,17 @@
+.container
+	.page-header.text-center
+		h1 #{title}
+	nav.navbar.navbar-default
+		div.container-fluid
+		div.navbar-header
+			button.navbar-toggle.collapsed(type="button",data-toggle="collapse",data-target="#bs-example-navbar-collapse-1",aria-expanded="false")
+			span.sr-only ToggleNavigation
+			span.icon-bar
+			span.icon-bar
+			span.icon-bar
+		div.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
+			ul.nav.navbar-nav
+				li
+					a(href="/list") 列表页
+				li
+					a(href="/add") 录入页

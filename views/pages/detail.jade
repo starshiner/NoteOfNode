@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+	.container
+		ol.breadcrumb
+			li
+				a(href="/list") 列表页
+			li.active 详情
+		.text-center.container
+			h3 #{note.title}
+			h4 作者：#{note.author}&nbsp;时间：#{note.date}
+			.text-left
+				p #{note.content}

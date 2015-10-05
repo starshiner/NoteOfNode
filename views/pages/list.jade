@@ -1,0 +1,48 @@
+extends ../layout
+
+block content
+	.container
+		ol.breadcrumb
+			li
+				a(href="/list") 列表页
+		table.table.table-bordered
+			thead
+				tr
+					td 序号
+					td 标题
+					td 时间
+					td 作者
+					td 查看
+					td 修改
+					td 删除
+			tbody
+				- var i = 0
+				each item in notes
+					- i++
+					tr(class="item-id-#{item._id}")
+						td #{i}
+						td #{item.title}
+						td #{item.date}
+						td #{item.author}
+						td 
+							a.btn.btn-default(target="_blank", href="../detail/#{item._id}") 查看
+						td 
+							a.btn.btn-default(target="_blank", href="../edit/#{item._id}") 修改
+						td 
+							button.btn.btn-danger.del(type="button", data-id="#{item._id}") 删除
+		.container.text-center
+			nav
+				ul.pagination
+					- var prevclass='',nextclass='',start=0,m=0,arr=[],prev=(id>0)?parseInt(id)-1:(prevclass="disabled",0),next=(id<Math.ceil(num/pageNum)-1)?parseInt(id)+1:(nextclass="disabled",id);
+					- arr[id] = "active";
+					- start = parseInt(id/pageNum)*pageNum;
+					li(class="#{prevclass}")
+						a(href="/list/#{prev}",aria-label="Previous")
+							span(aria-hidden="true") &laquo;
+					- for(var j = start;j<start+pageNum;j++){if(j<(Math.ceil(num/pageNum))){
+						li(class="#{arr[j]}")
+							a(href="/list/#{j}") #{j+1}
+					- }}
+					li(class="#{nextclass}")
+						a(href="/list/#{next}",aria-label="Next")
+							span(aria-hidden="true") &raquo;
